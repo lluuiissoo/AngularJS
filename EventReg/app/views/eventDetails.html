@@ -22,8 +22,16 @@
 
 <h3>Sessions</h3>
 
+Order By:
+<select ng-model="sortOrder" class="input-small">
+    <option selected value="name">Name</option>
+    <option value="duration">Duration</option>
+    <option value="level">Level</option>
+    <option value="-upVoteCount">Vote Count</option>
+</select>
+
 <ul class="sessions">
-    <li ng-repeat="session in event.sessions" >
+    <li ng-repeat="session in event.sessions | orderBy:sortOrder" >
         <div class="row session" ng-show="session.visible">
             <div class="col-sm-1 well votingWidget">
                 <button type="button" class="btn glyphicon glyphicon-chevron-up" ng-click="upVoteSession(session)"></button>

@@ -10,6 +10,9 @@
 
 eventsApp.controller('EventDetailsCtrl',
 	function ($scope) {
+        
+        $scope.sortOrder = "name"; //Default sort filter
+        
         $scope.event = {
             name: 'Angular Bootcamp',
             date: '10/26/2016',
@@ -28,7 +31,7 @@ eventsApp.controller('EventDetailsCtrl',
                     "duration": "1 hr",
                     "level": "Advanced",
                     "abstract": "In this session you will learn the ins and outs of directives!",
-                    "upVoteCount": 5,
+                    "upVoteCount": 0,
                     "visible": true,
                     "price": 15
                 },
@@ -40,7 +43,7 @@ eventsApp.controller('EventDetailsCtrl',
                     "level": "Introductory",
                     "abstract": "This session will take a closer look at scopes.  Learn what they do, how they do it, and how to get them to do it for you.",
                     "upVoteCount": 0,
-                    "visible": false,
+                    "visible": true,
                     "price": 25
                 },
                 {
@@ -50,13 +53,14 @@ eventsApp.controller('EventDetailsCtrl',
                     "duration": "2 hrs",
                     "level": "Intermediate",
                     "abstract": "Controllers are the beginning of everything Angular does.  Learn how to craft controllers that will win the respect of your friends and neighbors.",
-                    "upVoteCount": 85,
+                    "upVoteCount": 0,
                     "visible": true,
                     "price": 10
                 }
             ]
         };
 
+        /*Events*/
         $scope.upVoteSession = function (session){
             session.upVoteCount++;
         }
@@ -65,5 +69,6 @@ eventsApp.controller('EventDetailsCtrl',
             if (session.upVoteCount > 0)
                 session.upVoteCount--;
         }
+        /*Events*/
     }
 );
