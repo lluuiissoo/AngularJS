@@ -26,12 +26,18 @@ Order By:
 <select ng-model="sortOrder" class="input-small">
     <option selected value="name">Name</option>
     <option value="duration">Duration</option>
-    <option value="level">Level</option>
     <option value="-upVoteCount">Vote Count</option>
+</select>
+Show:
+<select ng-model="query.level" class="input-small">
+    <option selected value="">All</option>
+    <option value="introductory">Introductory</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
 </select>
 
 <ul class="sessions">
-    <li ng-repeat="session in event.sessions | orderBy:sortOrder" >
+    <li ng-repeat="session in event.sessions | orderBy:sortOrder | filter:query" >
         <div class="row session" ng-show="session.visible">
             <div class="col-sm-1 well votingWidget">
                 <button type="button" class="btn glyphicon glyphicon-chevron-up" ng-click="upVoteSession(session)"></button>
