@@ -29,7 +29,8 @@ eventsApp.controller('EventDetailsCtrl',
                     "level": "Advanced",
                     "abstract": "In this session you will learn the ins and outs of directives!",
                     "upVoteCount": 5,
-                    "visible": true
+                    "visible": true,
+                    "price": 15
                 },
                 {
 					"id": 2,
@@ -39,7 +40,8 @@ eventsApp.controller('EventDetailsCtrl',
                     "level": "Introductory",
                     "abstract": "This session will take a closer look at scopes.  Learn what they do, how they do it, and how to get them to do it for you.",
                     "upVoteCount": 0,
-                    "visible": false
+                    "visible": false,
+                    "price": 25
                 },
                 {
 					"id": 3,
@@ -49,7 +51,8 @@ eventsApp.controller('EventDetailsCtrl',
                     "level": "Intermediate",
                     "abstract": "Controllers are the beginning of everything Angular does.  Learn how to craft controllers that will win the respect of your friends and neighbors.",
                     "upVoteCount": 85,
-                    "visible": true
+                    "visible": true,
+                    "price": 10
                 }
             ]
         };
